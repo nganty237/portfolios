@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'VarentGrotesk';
+    src: url('/fonts/VarentGrotesk-Bold.otf') format('otf'); 
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'VarentGrotesk';
+    src: url('/fonts/VarentGrotesk-ExtLtIta.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+ .font2{
+    font-family: "VarentGrotesk";
+ }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:"VarentGrotesk", sans-serif;
+    line-height: 1.3;
+    font-size: 10px;
+   background-color:rgb(0, 0, 0, .8);
+   background: #081b29;
+   opacity: .9;
+}
+.head{
+    z-index: 9;
+    opacity: .8;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    padding: 0 20px 0px 20px;
+    background: #084c7c54;
+    background: #081b29;
+    box-shadow: 1.3px 1.3px 2px;
+    border-radius: solid;
+}
+header .active{
+    color: #fff;
+    /* background: transparent; */
+}
+.nav-container{
+    height: 40px;
+    margin: 10px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.lune{
+    background-color:#bac7d0f6;
+    border-radius: 100%;
+    margin-left:40px;
+}
+.ng{
+    background-color:#bac7d0f6;
+    border-radius: 100%;
+    margin-right: 40px;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    box-shadow: .1rem .1rem .2rem;
+}
+.aboutimage img{
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid #177ac1;
+}
+.aboutimage{
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.span{
+    color: #177ac1;
+
+}
+.aboutcontent p{
+    width: 50rem;
+    font-size: .8rem;
+}
+.aboutcontent h3{
+    text-align: center;
+    margin-bottom: 1.3rem;
+    font-size: 1.2rem;
+}
+.about .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #177ac1;
+    margin: 0px 23.4rem;
+    padding: .5rem .5rem;
+    border-radius: .7rem;
+}
+.about a{
+    text-decoration: none;
+    color: #081b29;
+}
+.skillsrow{
+    margin: 0rem 7rem;
+}
+.skills{
+    /* min-height: auto; */
+    padding-bottom:4rem ;
+    background: #0c3b5db2;
+    opacity: .8;
+}
+.skills .skillsrow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.skillsrow .skillscolumn{
+    flex:1;
+}
+.skillscolumn .title{
+    font-size: 1rem;
+    margin: 0 0 .5rem;
+}
+.skillsbox .skillscontent{
+    position: relative;
+    border: .05rem solid #177ac1;
+    border-radius: .2rem;
+    padding: .2rem .2rem;
+}
+.skillscontent .progress{
+    padding: .5rem 0;
+}
+.skillscontent .progress h3{
+    font-size:.8rem ;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+.skillscontent .progress h3 span{
+    color: #fff;
+}
+.skillscontent .progress .bar{
+    height: .5rem;
+    border-radius: .2rem;
+    border: .05rem solid #177ac1 ;
+}
+.skillscontent .progress .bar span{
+    display: block;
+    height: 100%;
+    border-radius: .2rem;
+    background: #177ac1;
+}
+.skillscolumn:nth-child(1) .skillscontent .progress:nth-child(1) .bar span{
+    width: 90%;
+}
+.skillscolumn:nth-child(1) .skillscontent .progress:nth-child(2) .bar span{
+    width: 70%;
+}
+.skillscolumn:nth-child(1) .skillscontent .progress:nth-child(3) .bar span{
+    width: 50%;
+}
+.skillscolumn:nth-child(1) .skillscontent .progress:nth-child(4) .bar span{
+    width: 30%;
+}
+
+.skillscolumn:nth-child(2) .skillscontent .progress:nth-child(1) .bar span{
+    width: 60%;
+}
+.skillscolumn:nth-child(2) .skillscontent .progress:nth-child(2) .bar span{
+    width: 70%;
+}
+.skillscolumn:nth-child(2) .skillscontent .progress:nth-child(3) .bar span{
+    width: 70%;
+}
+.skillscolumn:nth-child(2) .skillscontent .progress:nth-child(4) .bar span{
+    width: 70%;
+}
+hr{
+    margin: 1rem;
+}
+.heading{
+    color: #fff;
+}
+
+/*preloader*/
+body, html{
+    height: 100%;
+}
+#preloader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loadercontent{
+    text-align: center;
+    color: #fff;
+}
+.logo{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.hidden{
+    display: none;
+}

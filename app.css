@@ -1,0 +1,183 @@
+nav a{
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px;
+    color: #fff;
+}
+.mainC form input{
+    margin: 7px;
+}
+.container1{
+    border-radius: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    line-height:1.5rem ;
+    margin: 50px auto;   
+}
+.container1 p{
+    font-size: 15px;
+    color: #bac7d0f6;
+}
+.container1 h1{
+    font-size: 22px;
+    color: #ffffff;
+    width: 400px;
+}
+a:hover{
+    /* color: #0249fb; */
+    opacity: 0.6;
+    transition: .6s;
+}
+@keyframes gaby{
+    0%{
+        transform: translateY(0px);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translateY(-100px);
+        opacity: 0.6;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.logo{
+    animation:  3s 4s;
+}
+button{
+    margin: 5px 0px 0px 75px;
+    padding: 7px;
+    background-color: #000;
+    border-radius: 5px;
+}
+.container1 .a{
+    color: #ffffffd4;
+    text-decoration: none;
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+}
+.image1{
+    border-radius: 100%;
+    margin:25px 0px ;
+}
+.content{
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .first{
+    line-height: 1.8rem;
+    margin: 25px 0px;
+    font-size:30px ;
+}
+.intro{
+    width: 600px;
+}
+
+.work{
+    display: flex;
+    margin: 50px auto;
+}
+.heading{
+    font-size: 1.5rem;
+    margin-bottom: .3rem;
+    text-align: center;
+}
+.contact{
+    /* background-color:#0249fb1a; */
+    padding-bottom: .6rem;
+}
+.contact form{
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .inputbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 4rem; */
+}
+.contact form .inputbox .inputfield{
+    position: relative;
+    width: 40%;
+    margin: .3rem 0;
+}
+.contact form .inputbox .inputfield input
+{
+width: 90%;
+height: 100%;
+padding: .2rem;
+font-size: .5rem;
+color: #177ac1;
+background: transparent;
+border-radius: .2rem;
+border: .05rem solid ;
+
+}
+.contact form .textareafield textarea::placeholder, .contact form .inputbox .inputfield input::placeholder{
+    color: #fff;
+}
+.contact form .textareafield textarea{
+    width: 23rem;
+    color: #177ac1;
+    background: transparent;
+    border-radius: .2rem;
+    border: .05rem solid ;
+    padding: .2rem;
+    margin: .2rem ;
+    resize: none;
+}
+.contact form input{
+    width: 10%;
+    background: #177ac1;
+    margin: .3rem 0rem;
+}
+
+/* footer*/
+footer{
+    background-color: #1111119b;
+}
+.footercontainer{
+    width: 100%;
+    padding: 30px 30px 20px;
+}
+.socialicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialicon a{
+    font-size:7px ;
+    padding: 5px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialicon a i{
+    font-size: 2em;
+    color: #000000;
+    opacity: .9;
+}
+.socialicon a:hover{
+    background-color: #111;
+    transition: .4s;
+}
+.socialicon a:hover i{
+    color:#fff;
+    transition: .4s;
+}
+.footercontainer .copyright nav{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+}
