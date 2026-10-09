@@ -37,8 +37,8 @@
 /* 11. Editorial Footer & Social Links */
 @import url('css/footer.css');
 
-/* 12. Responsive Breakpoints */
-@import url('css/responsive.css');
-
-/* 13. Editorial Aesthetic Theme Layer */
+/* 12. Editorial Aesthetic Theme Layer */
 @import url('css/theme-editorial.css');
+
+/* 13. Comprehensive Responsive Breakpoints (Highest specificity cascade) */
+@import url('css/responsive.css');

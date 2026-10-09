@@ -138,6 +138,15 @@ function initNavigation() {
         document.body.style.overflow = '';
       });
     });
+
+    // Reset mobile drawer on screen resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        mobileToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+        document.body.style.overflow = '';
+      }
+    });
   }
 
   // Active page indicator
