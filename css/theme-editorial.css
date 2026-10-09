@@ -25,34 +25,30 @@ section {
 }
 
 .nav-container {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   padding: 1.5rem 0;
   width: 100% !important;
-  border-bottom: 0;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   z-index: 1000 !important;
   pointer-events: none;
-  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-container.scrolled {
-  padding: 0.85rem 0 !important;
-  background: rgba(251, 252, 255, 0.92) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.05) !important;
-}
-
+.nav-container.scrolled,
 body.dark-theme .nav-container.scrolled {
-  background: rgba(12, 14, 20, 0.92) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.5) !important;
+  padding: 1rem 0 !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .head {
