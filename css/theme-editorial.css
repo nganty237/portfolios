@@ -382,14 +382,59 @@ body.dark-theme .nav-container.scrolled {
   padding-top: 0.5rem;
 }
 
-.btn,
-.editorial-read-more-btn {
+/* Reset ONLY nav-context buttons — not project buttons */
+.nav-links .btn {
   background: transparent !important;
-  color: var(--text-primary) !important;
   border: 0 !important;
   box-shadow: none !important;
   padding: 0;
   border-radius: 0;
+}
+
+/* Project action buttons — pill ghost style */
+.editorial-read-more-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.55rem 1.25rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-medium) !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.editorial-read-more-btn:hover {
+  transform: translateY(-2px) !important;
+  color: #2b66ff !important;
+  border-color: #2b66ff !important;
+  box-shadow: 0 6px 20px rgba(43,102,255,0.14) !important;
+}
+
+.editorial-read-more-btn i {
+  font-size: 0.82rem;
+  transition: transform 0.2s ease;
+}
+
+.editorial-read-more-btn:hover i {
+  transform: translate(2px, -2px);
+}
+
+/* Figma variant */
+.editorial-read-more-btn.figma-btn {
+  border-color: rgba(162,89,255,0.35) !important;
+}
+
+.editorial-read-more-btn.figma-btn:hover {
+  color: #a259ff !important;
+  border-color: #a259ff !important;
+  box-shadow: 0 6px 20px rgba(162,89,255,0.15) !important;
 }
 
 .about-split,
