@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="LogixRoute dispatch interface preview">
+  <rect width="800" height="500" fill="#f1f3f6"/>
+  <rect x="52" y="38" width="696" height="424" rx="18" fill="#ffffff" stroke="#d9dee6"/>
+  <rect x="52" y="38" width="696" height="50" rx="18" fill="#1f2937"/>
+  <rect x="52" y="70" width="696" height="18" fill="#1f2937"/>
+  <circle cx="82" cy="63" r="6" fill="#f46d5e"/><circle cx="104" cy="63" r="6" fill="#f1b84b"/><circle cx="126" cy="63" r="6" fill="#58bd7d"/>
+  <text x="400" y="67" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#c7ced8">logixroute.engine/dispatch</text>
+  <rect x="84" y="116" width="230" height="310" rx="14" fill="#f8fafc" stroke="#d9dee6"/>
+  <text x="112" y="154" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#1f2937">Dispatch queue</text>
+  <rect x="112" y="190" width="174" height="56" rx="12" fill="#ffffff" stroke="#d9dee6"/>
+  <text x="130" y="215" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2937">Akwa to Bonamoussadi</text>
+  <text x="130" y="234" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667085">ETA 24 min / 7 stops</text>
+  <rect x="112" y="264" width="174" height="56" rx="12" fill="#ffffff" stroke="#d9dee6"/>
+  <text x="130" y="289" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2937">Deido pickup wave</text>
+  <text x="130" y="308" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667085">ETA 18 min / 4 stops</text>
+  <rect x="112" y="338" width="174" height="56" rx="12" fill="#ffffff" stroke="#d9dee6"/>
+  <text x="130" y="363" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2937">Bonapriso express</text>
+  <text x="130" y="382" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667085">ETA 31 min / 9 stops</text>
+  <rect x="344" y="116" width="374" height="310" rx="14" fill="#eef2f6" stroke="#d9dee6"/>
+  <path d="M372 390 C450 330 430 246 508 236 C586 226 574 170 690 150" fill="none" stroke="#2f6fed" stroke-width="8" stroke-linecap="round"/>
+  <path d="M382 170 C450 214 476 170 532 196 C588 222 610 260 682 250" fill="none" stroke="#9aa8ba" stroke-width="4" stroke-dasharray="8 10" stroke-linecap="round"/>
+  <circle cx="372" cy="390" r="12" fill="#2f6fed"/><circle cx="508" cy="236" r="10" fill="#2f6fed"/><circle cx="690" cy="150" r="12" fill="#d96f3e"/>
+  <rect x="372" y="142" width="124" height="42" rx="12" fill="#ffffff" stroke="#d9dee6"/>
+  <text x="394" y="168" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2937">A* route</text>
+  <rect x="546" y="358" width="136" height="42" rx="12" fill="#ffffff" stroke="#d9dee6"/>
+  <text x="568" y="384" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#1f2937">PostGIS layer</text>
+</svg>

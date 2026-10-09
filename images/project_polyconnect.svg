@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="PolyConnect academic portal preview">
+  <rect width="800" height="500" fill="#eef2f5"/>
+  <rect x="52" y="38" width="696" height="424" rx="18" fill="#ffffff" stroke="#d8e0e6"/>
+  <rect x="52" y="38" width="696" height="50" rx="18" fill="#243447"/>
+  <rect x="52" y="70" width="696" height="18" fill="#243447"/>
+  <circle cx="82" cy="63" r="6" fill="#f46d5e"/><circle cx="104" cy="63" r="6" fill="#f1b84b"/><circle cx="126" cy="63" r="6" fill="#58bd7d"/>
+  <text x="400" y="67" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#c7d0d9">polyconnect.enspd.cm</text>
+  <rect x="80" y="116" width="168" height="310" rx="14" fill="#f7f9fb" stroke="#dbe3ea"/>
+  <text x="108" y="154" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" fill="#243447">PolyConnect</text>
+  <rect x="108" y="184" width="112" height="30" rx="8" fill="#dbeafe"/><text x="124" y="204" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#2563eb">Workspace</text>
+  <text x="108" y="250" font-family="Inter, Arial, sans-serif" font-size="12" fill="#718092">Courses</text>
+  <text x="108" y="288" font-family="Inter, Arial, sans-serif" font-size="12" fill="#718092">Teams</text>
+  <text x="108" y="326" font-family="Inter, Arial, sans-serif" font-size="12" fill="#718092">Resources</text>
+  <text x="108" y="364" font-family="Inter, Arial, sans-serif" font-size="12" fill="#718092">Messages</text>
+  <text x="278" y="144" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#243447">Engineering hub</text>
+  <text x="278" y="168" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667383">Courses, project groups, and faculty updates in one portal.</text>
+  <rect x="278" y="200" width="194" height="96" rx="14" fill="#f7f9fb" stroke="#dbe3ea"/>
+  <text x="300" y="232" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667383">Active teams</text>
+  <text x="300" y="268" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#2563eb">18</text>
+  <rect x="494" y="200" width="194" height="96" rx="14" fill="#f7f9fb" stroke="#dbe3ea"/>
+  <text x="516" y="232" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667383">Shared files</text>
+  <text x="516" y="268" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#243447">246</text>
+  <rect x="278" y="322" width="410" height="104" rx="14" fill="#f7f9fb" stroke="#dbe3ea"/>
+  <rect x="302" y="346" width="120" height="12" rx="6" fill="#b9c7d4"/>
+  <rect x="302" y="374" width="340" height="10" rx="5" fill="#d8e0e6"/>
+  <rect x="302" y="398" width="270" height="10" rx="5" fill="#d8e0e6"/>
+</svg>

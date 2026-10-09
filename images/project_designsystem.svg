@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Design system board preview">
+  <rect width="800" height="500" fill="#f7f5f0"/>
+  <rect x="50" y="42" width="700" height="416" rx="18" fill="#fbfaf7" stroke="#ded8cf"/>
+  <rect x="50" y="42" width="700" height="52" rx="18" fill="#252525"/>
+  <rect x="50" y="76" width="700" height="18" fill="#252525"/>
+  <circle cx="80" cy="68" r="6" fill="#f46d5e"/>
+  <circle cx="102" cy="68" r="6" fill="#f1b84b"/>
+  <circle cx="124" cy="68" r="6" fill="#58bd7d"/>
+  <text x="400" y="72" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#c9c9c9">figma / nganty-design-system</text>
+  <rect x="78" y="122" width="160" height="300" rx="12" fill="#ffffff" stroke="#e5dfd6"/>
+  <text x="104" y="154" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#222">Foundation</text>
+  <rect x="104" y="180" width="108" height="28" rx="8" fill="#efe9df"/>
+  <text x="118" y="198" font-family="Inter, Arial, sans-serif" font-size="11" fill="#222">Color tokens</text>
+  <text x="104" y="238" font-family="Inter, Arial, sans-serif" font-size="11" fill="#706b64">Typography</text>
+  <text x="104" y="276" font-family="Inter, Arial, sans-serif" font-size="11" fill="#706b64">Components</text>
+  <text x="104" y="314" font-family="Inter, Arial, sans-serif" font-size="11" fill="#706b64">Interaction</text>
+  <text x="104" y="352" font-family="Inter, Arial, sans-serif" font-size="11" fill="#706b64">Accessibility</text>
+  <text x="270" y="142" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#222">Brand system board</text>
+  <text x="270" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6760">Tokens, components, and responsive rules kept in one source of truth.</text>
+  <g transform="translate(270 200)">
+    <rect width="82" height="82" rx="12" fill="#d96f3e"/>
+    <text x="12" y="106" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#222">Primary</text>
+    <text x="12" y="122" font-family="Inter, Arial, sans-serif" font-size="10" fill="#777">#D96F3E</text>
+  </g>
+  <g transform="translate(370 200)">
+    <rect width="82" height="82" rx="12" fill="#242424"/>
+    <text x="12" y="106" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#222">Ink</text>
+    <text x="12" y="122" font-family="Inter, Arial, sans-serif" font-size="10" fill="#777">#242424</text>
+  </g>
+  <g transform="translate(470 200)">
+    <rect width="82" height="82" rx="12" fill="#f1eadf" stroke="#ded8cf"/>
+    <text x="12" y="106" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#222">Canvas</text>
+    <text x="12" y="122" font-family="Inter, Arial, sans-serif" font-size="10" fill="#777">#F1EADF</text>
+  </g>
+  <g transform="translate(570 200)">
+    <rect width="82" height="82" rx="12" fill="#53736a"/>
+    <text x="12" y="106" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#222">Signal</text>
+    <text x="12" y="122" font-family="Inter, Arial, sans-serif" font-size="10" fill="#777">#53736A</text>
+  </g>
+  <rect x="270" y="354" width="382" height="68" rx="14" fill="#ffffff" stroke="#e5dfd6"/>
+  <text x="292" y="385" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#222">Reusable interface kit</text>
+  <rect x="292" y="402" width="142" height="8" rx="4" fill="#dad2c8"/>
+  <rect x="526" y="372" width="88" height="32" rx="16" fill="#242424"/>
+  <text x="570" y="392" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#fff">Button</text>
+</svg>

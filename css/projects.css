@@ -1,0 +1,321 @@
+/* --- Stats Strip --- */
+.stats-strip {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface-elevated);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* --- Section Nav Tabs Header --- */
+.editorial-tabs-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.editorial-tab-link {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  position: relative;
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.editorial-tab-link.active {
+  color: var(--text-primary);
+}
+
+.editorial-tab-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: var(--accent-primary);
+  border-radius: 2px;
+}
+
+.editorial-tab-link:hover {
+  color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   EXACT SRINIVASAN.DESIGN EDITORIAL BENTO PROJECT CARD LAYOUT
+   ========================================================================== */
+.featured-projects {
+  background: transparent;
+  color: #171b26;
+  padding-top: 1rem;
+  padding-bottom: 5.5rem;
+}
+
+.featured-projects .container {
+  max-width: 1200px;
+}
+
+.selected-work-tabs {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 38px;
+  margin-bottom: 3.5rem;
+  background: transparent;
+  border-bottom: 0;
+}
+
+.selected-work-tab {
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  color: #171b26;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #2b66ff;
+  padding-bottom: 4px;
+}
+
+.editorial-works-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.editorial-work-card,
+.editorial-work-card.reverse {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.editorial-work-card.reverse .editorial-media-container {
+  order: initial;
+}
+
+.editorial-work-card.reverse .editorial-content-container {
+  order: initial;
+}
+
+/* Left: Large Visual Canvas Container */
+.editorial-media-container {
+  min-height: auto;
+  background:
+    linear-gradient(rgba(183, 211, 227, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183, 211, 227, 0.2) 1px, transparent 1px),
+    #f4f9fd;
+  background-size: 26px 26px;
+  border-radius: 20px;
+  padding: clamp(1.2rem, 2.8vw, 2.2rem);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  transition: transform var(--transition-slow);
+}
+
+.editorial-media-container:hover {
+  transform: none;
+}
+
+/* Floating Window Mockup */
+.editorial-window-frame {
+  width: 100%;
+  max-width: 580px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 42, 68, 0.08);
+  box-shadow: 0 16px 36px -6px rgba(18, 38, 54, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.editorial-window-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem;
+  background: #ffffff;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.editorial-topbar-dots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.editorial-topbar-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-medium);
+}
+
+.editorial-topbar-domain {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #84919b;
+}
+
+.editorial-window-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Right: Editorial Content Typography & Bullets */
+.editorial-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.05rem;
+  padding: 0.4rem 0;
+  color: #4b5565;
+}
+
+.editorial-project-heading {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  color: #171b26;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  max-width: 560px;
+}
+
+.editorial-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #6b7280;
+}
+
+.editorial-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: #f7f9fc;
+  border: 1px solid #e3e8ee;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #555555;
+}
+
+.editorial-meta-badge.figma-badge {
+  background: #f7f9fc;
+  color: #555555;
+  border-color: #e3e8ee;
+}
+
+/* Checkmark Bullet Highlights */
+.editorial-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  margin: 0.6rem 0 0.4rem;
+}
+
+.editorial-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: #4b5565;
+  line-height: 1.55;
+  max-width: 560px;
+}
+
+.editorial-checkmark {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 600;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+.editorial-bullet-item strong {
+  color: #171b26;
+  font-weight: 600;
+}
+
+/* Editorial Read More button */
+.editorial-read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #171b26 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.editorial-read-more-btn:hover {
+  transform: translateY(-1px);
+  color: #2b66ff !important;
+  border-color: #2b66ff !important;
+  box-shadow: 0 6px 18px rgba(43, 102, 255, 0.12) !important;
+}
+
+.editorial-read-more-btn i {
+  font-size: 0.82rem;
+  transition: transform var(--transition-fast);
+}
+}
+
+.editorial-read-more-btn:hover i {
+  transform: translate(2px, -2px);
+}
+

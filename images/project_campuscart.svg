@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="CampusCart product interface preview">
+  <rect width="800" height="500" fill="#f4f1eb"/>
+  <rect x="52" y="38" width="696" height="424" rx="18" fill="#ffffff" stroke="#ded8ce"/>
+  <rect x="52" y="38" width="696" height="50" rx="18" fill="#222222"/>
+  <rect x="52" y="70" width="696" height="18" fill="#222222"/>
+  <circle cx="82" cy="63" r="6" fill="#f46d5e"/>
+  <circle cx="104" cy="63" r="6" fill="#f1b84b"/>
+  <circle cx="126" cy="63" r="6" fill="#58bd7d"/>
+  <text x="404" y="67" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#c9c9c9">campuscart.enspd/storefront</text>
+  <rect x="78" y="112" width="150" height="314" rx="14" fill="#f8f6f2" stroke="#e4ded5"/>
+  <text x="104" y="150" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#242424">CampusCart</text>
+  <rect x="104" y="178" width="96" height="30" rx="15" fill="#e9683f"/>
+  <text x="152" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">Market</text>
+  <text x="104" y="240" font-family="Inter, Arial, sans-serif" font-size="12" fill="#777">Orders</text>
+  <text x="104" y="278" font-family="Inter, Arial, sans-serif" font-size="12" fill="#777">Vendors</text>
+  <text x="104" y="316" font-family="Inter, Arial, sans-serif" font-size="12" fill="#777">Inventory</text>
+  <text x="104" y="354" font-family="Inter, Arial, sans-serif" font-size="12" fill="#777">Settings</text>
+  <text x="260" y="142" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="750" fill="#222">Student marketplace</text>
+  <text x="260" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6760">Checkout and vendor flows designed for campus delivery.</text>
+  <rect x="598" y="123" width="104" height="34" rx="17" fill="#222"/>
+  <text x="650" y="145" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">Prototype</text>
+  <g transform="translate(260 196)">
+    <rect width="134" height="156" rx="14" fill="#fff" stroke="#e5ded4"/>
+    <rect x="14" y="14" width="106" height="66" rx="10" fill="#f3e4d8"/>
+    <rect x="30" y="32" width="74" height="11" rx="5.5" fill="#d15b34"/>
+    <rect x="42" y="52" width="50" height="9" rx="4.5" fill="#ed9a72"/>
+    <text x="14" y="106" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#252525">Lunch tray</text>
+    <text x="14" y="128" font-family="Inter, Arial, sans-serif" font-size="11" fill="#777">1,500 XAF</text>
+  </g>
+  <g transform="translate(414 196)">
+    <rect width="134" height="156" rx="14" fill="#fff" stroke="#e5ded4"/>
+    <rect x="14" y="14" width="106" height="66" rx="10" fill="#e7ebf3"/>
+    <rect x="38" y="31" width="58" height="38" rx="8" fill="#65758c"/>
+    <text x="14" y="106" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#252525">Lab kit</text>
+    <text x="14" y="128" font-family="Inter, Arial, sans-serif" font-size="11" fill="#777">8,000 XAF</text>
+  </g>
+  <g transform="translate(568 196)">
+    <rect width="134" height="156" rx="14" fill="#fff" stroke="#e5ded4"/>
+    <rect x="14" y="14" width="106" height="66" rx="10" fill="#e1f0e8"/>
+    <rect x="32" y="42" width="70" height="16" rx="8" fill="#3c9b70"/>
+    <text x="14" y="106" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#252525">USB-C cable</text>
+    <text x="14" y="128" font-family="Inter, Arial, sans-serif" font-size="11" fill="#777">4,500 XAF</text>
+  </g>
+  <rect x="260" y="378" width="442" height="48" rx="12" fill="#f8f6f2" stroke="#e4ded5"/>
+  <rect x="282" y="396" width="118" height="12" rx="6" fill="#d9d2c8"/>
+  <rect x="430" y="396" width="86" height="12" rx="6" fill="#e9683f"/>
+  <rect x="548" y="396" width="126" height="12" rx="6" fill="#d9d2c8"/>
+</svg>

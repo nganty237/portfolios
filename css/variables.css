@@ -1,0 +1,84 @@
+/* ==========================================================================
+   GABRIEL NGANTY - PORTFOLIO DESIGN SYSTEM
+   Product portfolio with restrained case-study previews
+   Full-Stack JavaScript Developer & UI/UX Web Designer
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* --- Design Tokens & Color Palettes --- */
+:root {
+  /* Brand Accents */
+  --accent-primary: #2B66FF;
+  --accent-primary-hover: #1A4FD9;
+  --accent-primary-soft: rgba(43, 102, 255, 0.1);
+  --accent-secondary: #3D7362;
+  --accent-secondary-soft: rgba(61, 115, 98, 0.1);
+  --accent-figma: #A259FF;
+  --accent-figma-soft: rgba(162, 89, 255, 0.12);
+  --accent-react: #00D8FF;
+  --accent-angular: #DD0031;
+  --accent-node: #68A063;
+
+  /* Editorial Light Theme Default */
+  --bg-body: #fbfcff;
+  --bg-ambient-wash: #fbfcff;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f8fafc;
+  --bg-surface-hover: #f1f5f9;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --bg-glass-card: rgba(0, 0, 0, 0.02);
+  --bg-mockup-frame: #F0F5FA;
+
+  --text-primary: #171B26;
+  --text-secondary: #4B5565;
+  --text-muted: #8F96A3;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-glass: rgba(255, 255, 255, 0.8);
+
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 25px rgba(43, 102, 255, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --font-heading: 'Newsreader', 'Georgia', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --container-max: 1240px;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --bg-body: #0C0E14;
+  --bg-ambient-wash: linear-gradient(135deg, #0C0E14 0%, #12151E 50%, #161A25 100%);
+  --bg-surface: #141722;
+  --bg-surface-elevated: #1B202D;
+  --bg-surface-hover: #22293A;
+  --bg-glass: rgba(20, 23, 34, 0.85);
+  --bg-glass-card: rgba(255, 255, 255, 0.03);
+  --bg-mockup-frame: #181C28;
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverse: #0C0E14;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-glass: rgba(255, 255, 255, 0.12);
+
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(43, 102, 255, 0.12);
+}
+
