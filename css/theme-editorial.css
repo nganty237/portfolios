@@ -920,4 +920,49 @@ body.dark-theme #preloader {
   background-color: #0c0e14 !important;
 }
 
+/* --- High-contrast Card Backgrounds in Dark Mode --- */
+body.dark-theme .highlight-item,
+body.dark-theme .skill-card,
+body.dark-theme .timeline-card {
+  background: #141722 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .hero-pill {
+  background: #141722 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.dark-theme .contact-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: transparent !important;
+}
+
+body.dark-theme .contact-card-icon {
+  background: #181d2a !important;
+  color: #60a5fa !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+body.dark-theme .contact-note-card {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme .btn-secondary {
+  background: #141722 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f3f4f6 !important;
+}
+
+body.dark-theme .btn-primary {
+  background: #2b66ff !important;
+  border-color: #2b66ff !important;
+  color: #ffffff !important;
+}
+
+
 
