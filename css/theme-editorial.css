@@ -80,19 +80,13 @@ body.dark-theme .nav-container.scrolled {
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
 }
 
-/* On scroll: fade out only desktop text links, keep logo and action icons */
-.nav-container.scrolled .nav-links {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-8px);
-  pointer-events: none;
-}
-
-.nav-container.scrolled .nav-actions {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: none !important;
+/* On scroll: fade out text links and theme-toggle, keep only logo and menu button */
+.nav-container.scrolled .nav-links,
+.nav-container.scrolled .theme-toggle {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-8px) !important;
+  pointer-events: none !important;
 }
 
 .nav-links a {

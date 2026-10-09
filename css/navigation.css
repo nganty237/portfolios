@@ -142,8 +142,9 @@
   transition: opacity 0.3s ease, visibility 0.3s ease, margin 0.3s ease;
 }
 
-/* On scroll: fade out middle text links, keep logo and action icons */
-.nav-container.scrolled .nav-links {
+/* On scroll: fade out text links and theme-toggle, keep only logo and menu button */
+.nav-container.scrolled .nav-links,
+.nav-container.scrolled .theme-toggle {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
@@ -151,10 +152,7 @@
 }
 
 .nav-container.scrolled .nav-actions {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  margin-right: 50px;
+  margin-right: 0;
 }
 
 /* --- Scroll-triggered compact navigation (Wrapper fixed right in .head) --- */
