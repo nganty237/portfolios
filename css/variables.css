@@ -59,7 +59,9 @@
 }
 
 /* Dark Theme Variables */
-body.dark-theme {
+body.dark-theme,
+html.dark-theme,
+[data-theme="dark"] {
   --bg-body: #0C0E14;
   --bg-ambient-wash: linear-gradient(135deg, #0C0E14 0%, #12151E 50%, #161A25 100%);
   --bg-surface: #141722;

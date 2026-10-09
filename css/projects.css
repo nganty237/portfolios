@@ -103,7 +103,7 @@
   height: 34px;
   display: inline-flex;
   align-items: center;
-  color: #171b26;
+  color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 0.84rem;
   font-weight: 700;
@@ -212,13 +212,13 @@
   justify-content: center;
   gap: 1.05rem;
   padding: 0.4rem 0;
-  color: #4b5565;
+  color: var(--text-secondary);
 }
 
 .editorial-project-heading {
   font-size: clamp(1.4rem, 2.2vw, 1.85rem);
   font-weight: 600;
-  color: #171b26;
+  color: var(--text-primary);
   line-height: 1.25;
   letter-spacing: -0.015em;
   max-width: 560px;
@@ -230,7 +230,7 @@
   flex-wrap: wrap;
   gap: 0.6rem;
   font-size: 0.88rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 .editorial-meta-badge {
@@ -239,17 +239,17 @@
   gap: 0.35rem;
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-full);
-  background: #f7f9fc;
-  border: 1px solid #e3e8ee;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
   font-size: 0.74rem;
   font-weight: 500;
-  color: #555555;
+  color: var(--text-secondary);
 }
 
 .editorial-meta-badge.figma-badge {
-  background: #f7f9fc;
-  color: #555555;
-  border-color: #e3e8ee;
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
 }
 
 /* Checkmark Bullet Highlights */
@@ -265,21 +265,21 @@
   align-items: flex-start;
   gap: 0.75rem;
   font-size: 0.92rem;
-  color: #4b5565;
+  color: var(--text-secondary);
   line-height: 1.55;
   max-width: 560px;
 }
 
 .editorial-checkmark {
   font-size: 0.95rem;
-  color: #6b7280;
+  color: var(--text-muted);
   font-weight: 600;
   line-height: 1.5;
   flex-shrink: 0;
 }
 
 .editorial-bullet-item strong {
-  color: #171b26;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -292,9 +292,9 @@
   border-radius: 9999px;
   font-size: 0.88rem;
   font-weight: 500;
-  color: #171b26 !important;
-  background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-medium) !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   width: fit-content;

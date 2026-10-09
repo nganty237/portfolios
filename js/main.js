@@ -77,43 +77,64 @@ function initPreloader() {
 function initTheme() {
   const themeToggleBtns = document.querySelectorAll('.theme-toggle, .scroll-nav-theme-btn');
   const storedTheme = localStorage.getItem('nganty_portfolio_theme');
-  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Set initial theme
-  if (storedTheme === 'light' || (!storedTheme && prefersLight)) {
-    document.body.classList.add('light-theme');
-    updateThemeIcons(true);
-  } else {
-    document.body.classList.remove('light-theme');
-    updateThemeIcons(false);
-  }
+  // Determine initial theme state
+  const isDark = storedTheme === 'dark' || (storedTheme !== 'light' && prefersDark);
+  applyTheme(isDark);
 
   themeToggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isLight = document.body.classList.toggle('light-theme');
-      localStorage.setItem('nganty_portfolio_theme', isLight ? 'light' : 'dark');
-      updateThemeIcons(isLight);
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentDark = document.body.classList.contains('dark-theme');
+      const nextDark = !currentDark;
+      applyTheme(nextDark);
+      localStorage.setItem('nganty_portfolio_theme', nextDark ? 'dark' : 'light');
     });
   });
+
+  // Listen to system OS preference changes if no manual theme stored
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('nganty_portfolio_theme')) {
+        applyTheme(e.matches);
+      }
+    });
+  }
 }
 
-function updateThemeIcons(isLight) {
+function applyTheme(isDark) {
+  if (isDark) {
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.classList.add('dark-theme');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.body.classList.remove('dark-theme');
+    document.body.classList.add('light-theme');
+    document.documentElement.classList.remove('dark-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+  updateThemeIcons(isDark);
+}
+
+function updateThemeIcons(isDark) {
   const icons = document.querySelectorAll('.theme-toggle-icon');
   icons.forEach(icon => {
-    if (isLight) {
-      icon.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-      icon.setAttribute('title', 'Switch to Dark Theme');
-    } else {
+    if (isDark) {
       icon.innerHTML = `<i class="fa-solid fa-sun"></i>`;
       icon.setAttribute('title', 'Switch to Light Theme');
+    } else {
+      icon.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+      icon.setAttribute('title', 'Switch to Dark Theme');
     }
   });
 
   // Update the label in the scroll-nav dropdown
-  const themeLabel = document.querySelector('.scroll-nav-theme-label');
-  if (themeLabel) {
-    themeLabel.textContent = isLight ? 'Light mode' : 'Dark mode';
-  }
+  const themeLabels = document.querySelectorAll('.scroll-nav-theme-label');
+  themeLabels.forEach(label => {
+    label.textContent = isDark ? 'Light mode' : 'Dark mode';
+  });
 }
 
 /* --- 3. Navigation & Mobile Drawer --- */

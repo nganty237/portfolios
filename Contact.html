@@ -12,6 +12,19 @@
   
   <!-- Core Design System -->
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('nganty_portfolio_theme');
+        var d = t === 'dark' || (t !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (d) {
+          document.documentElement.classList.add('dark-theme');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -36,7 +49,7 @@
 
       <div class="nav-actions">
         <button class="theme-toggle" aria-label="Toggle dark/light mode">
-          <span class="theme-toggle-icon"><i class="fa-solid fa-sun"></i></span>
+          <span class="theme-toggle-icon"><i class="fa-solid fa-moon"></i></span>
         </button>
         <button class="mobile-toggle" aria-label="Open mobile menu">
           <i class="fa-solid fa-bars"></i>
@@ -51,7 +64,7 @@
           <a href="Contact.html" class="scroll-nav-link active">Get in touch</a>
           <span class="scroll-nav-divider"></span>
           <button class="scroll-nav-theme-btn" aria-label="Toggle dark/light mode">
-            <span class="theme-toggle-icon"><i class="fa-solid fa-sun"></i></span>
+            <span class="theme-toggle-icon"><i class="fa-solid fa-moon"></i></span>
             <span class="scroll-nav-theme-label">Dark mode</span>
           </button>
         </div>
