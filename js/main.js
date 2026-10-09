@@ -53,24 +53,16 @@ function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
-  window.addEventListener('load', () => {
+  const hidePreloader = () => {
+    if (preloader.classList.contains('loaded')) return;
+    preloader.classList.add('loaded');
     setTimeout(() => {
-      preloader.classList.add('loaded');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 600);
-    }, 350);
-  });
+      preloader.style.display = 'none';
+    }, 700);
+  };
 
-  // Safety fallback
-  setTimeout(() => {
-    if (preloader && !preloader.classList.contains('loaded')) {
-      preloader.classList.add('loaded');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 600);
-    }
-  }, 1800);
+  // Allow the letter revelation & progress animation to complete smoothly (~2.1s)
+  setTimeout(hidePreloader, 2100);
 }
 
 /* --- 2. Theme Switcher (Dark / Light Mode) --- */

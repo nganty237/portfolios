@@ -8,8 +8,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+  gap: 1.8rem;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s;
 }
 
 #preloader.loaded {
@@ -20,21 +20,53 @@
 
 .loader-logo-wrapper {
   position: relative;
-  width: 90px;
+  width: 100px;
   height: auto;
 }
 
 .loader-logo-wrapper svg {
   width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 .loader-logo-wrapper svg path {
   fill: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: letterFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader-logo-wrapper svg path:nth-child(1) { animation-delay: 0.05s; }
+.loader-logo-wrapper svg path:nth-child(2) { animation-delay: 0.12s; }
+.loader-logo-wrapper svg path:nth-child(3) { animation-delay: 0.19s; }
+.loader-logo-wrapper svg path:nth-child(4) { animation-delay: 0.26s; }
+.loader-logo-wrapper svg path:nth-child(5) { animation-delay: 0.33s; }
+.loader-logo-wrapper svg path:nth-child(6) { animation-delay: 0.40s; }
+.loader-logo-wrapper svg path:nth-child(7) { animation-delay: 0.47s; }
+.loader-logo-wrapper svg path:nth-child(8) { animation-delay: 0.54s; }
+.loader-logo-wrapper svg path:nth-child(9) { animation-delay: 0.61s; }
+.loader-logo-wrapper svg path:nth-child(10) { animation-delay: 0.68s; }
+.loader-logo-wrapper svg path:nth-child(11) { animation-delay: 0.75s; }
+.loader-logo-wrapper svg path:nth-child(12) { animation-delay: 0.82s; }
+.loader-logo-wrapper svg path:nth-child(13) { animation-delay: 0.89s; }
+
+@keyframes letterFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .loader-progress {
-  width: 160px;
+  width: 170px;
   height: 3px;
   background: var(--border-subtle);
   border-radius: var(--radius-full);
@@ -48,14 +80,15 @@
   left: 0;
   height: 100%;
   width: 0%;
-  background: var(--accent-primary);
+  background: #2b66ff;
   border-radius: var(--radius-full);
-  animation: loadProgress 1.2s ease-in-out forwards;
+  animation: loadProgress 1.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 @keyframes loadProgress {
   0% { width: 0%; }
-  60% { width: 80%; }
+  35% { width: 45%; }
+  70% { width: 85%; }
   100% { width: 100%; }
 }
 

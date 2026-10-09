@@ -72,5 +72,10 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 6rem 0;
   position: relative;
+  scroll-margin-top: 100px;
+}
+
+[id] {
+  scroll-margin-top: 100px;
 }
 

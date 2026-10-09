@@ -415,16 +415,69 @@ body.dark-theme .nav-container.scrolled {
   font-size: 1.05rem;
 }
 
-.about-highlights,
-.skills-grid {
-  grid-template-columns: 1fr;
-  gap: 0;
-  border-top: 1px solid var(--border-subtle);
+.about-highlights {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 1.25rem !important;
+  border-top: 0 !important;
+  margin-top: 1rem !important;
 }
 
-.highlight-item,
-.skill-card,
-.timeline-card,
+.skills-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 1.8rem !important;
+  border-top: 0 !important;
+}
+
+.highlight-item {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  padding: 1.4rem !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 16px !important;
+  padding: 1.8rem !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-card:hover,
+.highlight-item:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+.timeline-card {
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 16px !important;
+  padding: 1.8rem !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+}
+
+.timeline {
+  max-width: 860px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.8rem !important;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.timeline::before,
+.timeline-dot {
+  display: none;
+}
+
 .contact-card,
 .contact-form-wrapper {
   background: transparent;
@@ -435,24 +488,10 @@ body.dark-theme .nav-container.scrolled {
   padding: 1.5rem 0;
 }
 
-.skill-card:hover,
 .contact-card:hover {
   transform: none;
   border-color: var(--border-subtle);
   box-shadow: none;
-}
-
-.timeline {
-  max-width: 980px;
-}
-
-.timeline::before,
-.timeline-dot {
-  display: none;
-}
-
-.timeline {
-  padding-left: 0;
 }
 
 .contact-info-cards {
