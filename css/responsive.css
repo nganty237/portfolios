@@ -96,6 +96,10 @@ html, body {
     display: none !important;
   }
 
+  .nav-actions {
+    margin-left: auto;
+  }
+
   .mobile-toggle {
     display: flex !important;
   }
@@ -173,14 +177,19 @@ html, body {
 @media (max-width: 640px) {
   /* Scroll Header Dropdown: Becomes a sleek floating card below the topbar */
   .scroll-nav-wrapper {
-    position: static;
-  }
-
-  .scroll-nav-trigger {
     position: absolute;
     right: 1.25rem;
     top: 50%;
-    transform: translateY(-50%);
+    margin-top: -21px;
+    height: 42px;
+    transform: none;
+  }
+
+  .scroll-nav-trigger {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
   }
 
   .scroll-nav-dropdown {
@@ -261,6 +270,11 @@ html, body {
 
 /* --- 6. Small & Compact Mobile Phones (<= 480px) --- */
 @media (max-width: 480px) {
+  .head {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -279,13 +293,19 @@ html, body {
     height: 13px;
   }
 
+  .scroll-nav-wrapper {
+    right: 1rem;
+    margin-top: -19px;
+    height: 38px;
+  }
+
   .scroll-nav-trigger {
     width: 38px;
     height: 38px;
     min-width: 38px;
     min-height: 38px;
     font-size: 0.85rem;
-    right: 1rem;
+    right: auto;
   }
 
   .mobile-toggle {
