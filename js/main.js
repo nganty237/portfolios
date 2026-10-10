@@ -403,6 +403,130 @@ function initContactForm() {
 }
 
 /* --- 7. GSAP Smooth Animations --- */
+function initHorizontalProjects() {
+  const section = document.getElementById('Selectedworks');
+  const viewport = section?.querySelector('.editorial-works-viewport');
+  const rail = section?.querySelector('.editorial-works-rail');
+  const panels = rail ? gsap.utils.toArray('.editorial-work-panel', rail) : [];
+
+  if (!section || !viewport || !rail || !panels.length || typeof ScrollTrigger === 'undefined' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const media = gsap.matchMedia();
+
+  media.add('(min-width: 993px)', () => {
+    section.classList.add('is-horizontal-projects');
+
+    const getScrollDistance = () => Math.max(0, rail.scrollWidth - viewport.clientWidth);
+    const setActivePanel = (progress) => {
+      const activeIndex = Math.round(progress * (panels.length - 1));
+      panels.forEach((panel, index) => panel.classList.toggle('is-active', index === activeIndex));
+    };
+
+    setActivePanel(0);
+
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: 'top top',
+        end: () => `+=${getScrollDistance()}`,
+        pin: true,
+        scrub: 0.8,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        onUpdate: (self) => setActivePanel(self.progress)
+      }
+    });
+
+    timeline.to(rail, {
+      x: () => -getScrollDistance(),
+      duration: 1,
+      ease: 'none'
+    }, 0);
+
+    panels.forEach((panel, index) => {
+      const position = index / (panels.length - 1 || 1);
+      const mediaContainer = panel.querySelector('.editorial-media-container');
+      const content = panel.querySelector('.editorial-content-container');
+
+      timeline.fromTo(mediaContainer,
+        { autoAlpha: 0.6, scale: 0.92, y: 28 },
+        { autoAlpha: 1, scale: 1, y: 0, duration: 0.2, ease: 'power2.out' },
+        position
+      );
+      timeline.fromTo(content,
+        { autoAlpha: 0, x: 28 },
+        { autoAlpha: 1, x: 0, duration: 0.2, ease: 'power2.out' },
+        position + 0.04
+      );
+
+      if (index < panels.length - 1) {
+        timeline.to([mediaContainer, content], {
+          autoAlpha: 0.55,
+          scale: 0.96,
+          duration: 0.14,
+          ease: 'power1.in'
+        }, position + 0.32);
+      }
+    });
+
+    return () => {
+      section.classList.remove('is-horizontal-projects');
+      panels.forEach((panel) => panel.classList.remove('is-active'));
+      gsap.set([rail, ...panels], { clearProps: 'transform,opacity,filter,visibility' });
+      gsap.set(panels.flatMap((panel) => [
+        panel.querySelector('.editorial-media-container'),
+        panel.querySelector('.editorial-content-container')
+      ]), { clearProps: 'transform,opacity,visibility' });
+    };
+  });
+}
+
+function initAcademicTimeline() {
+  if (typeof ScrollTrigger === 'undefined' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  gsap.utils.toArray('.timeline').forEach((timeline) => {
+    const progress = timeline.querySelector('.timeline-progress');
+    const items = gsap.utils.toArray('.timeline-item', timeline);
+
+    if (!progress || !items.length) return;
+
+    gsap.fromTo(progress,
+      { scaleY: 0 },
+      {
+        scaleY: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: timeline,
+          start: 'top 72%',
+          end: 'bottom 55%',
+          scrub: true
+        }
+      }
+    );
+
+    items.forEach((item) => {
+      gsap.fromTo(item,
+        { autoAlpha: 0, y: 28 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 84%',
+            toggleActions: 'play none none none',
+            onEnter: () => item.classList.add('is-active'),
+            onEnterBack: () => item.classList.add('is-active')
+          }
+        }
+      );
+    });
+  });
+}
+
 function initGSAPAnimations() {
   if (typeof gsap === 'undefined') return;
 
@@ -420,9 +544,12 @@ function initGSAPAnimations() {
       .from('.hero-links a', { opacity: 0, y: 12, stagger: 0.08 }, '-=0.4');
   }
 
+  initHorizontalProjects();
+  initAcademicTimeline();
+
   // ScrollReveal for Editorial Work Cards & Project Cards
   if (typeof ScrollTrigger !== 'undefined') {
-    gsap.utils.toArray('.editorial-work-card, .project-card').forEach((card, index) => {
+    gsap.utils.toArray('.editorial-work-card:not(.editorial-work-panel), .project-card').forEach((card, index) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -452,19 +579,5 @@ function initGSAPAnimations() {
       });
     });
 
-    // Timeline item reveal
-    gsap.utils.toArray('.timeline-item').forEach((item) => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        },
-        opacity: 0,
-        x: -30,
-        duration: 0.8,
-        ease: 'power2.out'
-      });
-    });
   }
 }

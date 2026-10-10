@@ -29,6 +29,28 @@ html, body {
 
 /* --- 3. Tablets & Small Laptops (<= 992px) --- */
 @media (max-width: 992px) {
+  .featured-projects.is-horizontal-projects .editorial-works-viewport {
+    overflow: visible;
+  }
+
+  .featured-projects.is-horizontal-projects .editorial-works-rail {
+    width: auto;
+    flex-direction: column;
+    gap: 4.5rem;
+    transform: none !important;
+  }
+
+  .featured-projects.is-horizontal-projects .editorial-work-panel {
+    flex: none;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    opacity: 1;
+    filter: none;
+  }
+
   /* Editorial Bento Cards Stack */
   .editorial-work-card,
   .editorial-work-card.reverse {
