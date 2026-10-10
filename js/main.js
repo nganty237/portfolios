@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initTheme();
   initNavigation();
+  initPageScrollProgress();
   initScrollToTop();
   initProjectFilters();
   initProjectModal();
@@ -73,6 +74,37 @@ function initScrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+}
+
+function initPageScrollProgress() {
+  const progressBar = document.createElement('div');
+  progressBar.className = 'page-scroll-progress';
+  progressBar.setAttribute('aria-hidden', 'true');
+  document.body.prepend(progressBar);
+
+  let ticking = false;
+
+  const updateProgress = () => {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0
+      ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight))
+      : 0;
+
+    progressBar.style.transform = `scaleX(${progress})`;
+    progressBar.classList.toggle('is-visible', window.scrollY > 4 && progress > 0);
+    ticking = false;
+  };
+
+  const requestProgressUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateProgress);
+  };
+
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate, { passive: true });
+  window.addEventListener('load', requestProgressUpdate, { once: true });
+  requestProgressUpdate();
 }
 
 /* --- 2. Theme Switcher (Dark / Light Mode) --- */
@@ -435,7 +467,8 @@ function initHorizontalProjects() {
         scrub: 0.8,
         invalidateOnRefresh: true,
         anticipatePin: 1,
-        onUpdate: (self) => setActivePanel(self.progress)
+        onUpdate: (self) => setActivePanel(self.progress),
+        onRefresh: (self) => setActivePanel(self.progress)
       }
     });
 
@@ -492,6 +525,36 @@ function initAcademicTimeline() {
 
     if (!progress || !items.length) return;
 
+    const getLineMetrics = () => {
+      const timelineRect = timeline.getBoundingClientRect();
+      const dots = items.map((item) => item.querySelector('.timeline-dot'));
+      const firstDot = dots[0].getBoundingClientRect();
+      const lastDot = dots[dots.length - 1].getBoundingClientRect();
+      const start = firstDot.top + firstDot.height / 2 - timelineRect.top;
+      const end = lastDot.top + lastDot.height / 2 - timelineRect.top;
+
+      timeline.style.setProperty('--timeline-line-start', `${start}px`);
+      timeline.style.setProperty('--timeline-line-end', `${end}px`);
+
+      return { start, end };
+    };
+
+    const getScrollDistance = () => {
+      const { start, end } = getLineMetrics();
+      return Math.max(1, end - start + window.innerHeight * 0.17);
+    };
+
+    const setActiveItems = (progressValue) => {
+      const activeIndex = Math.min(
+        items.length - 1,
+        Math.floor(progressValue * items.length)
+      );
+
+      items.forEach((item, index) => {
+        item.classList.toggle('is-active', index <= activeIndex);
+      });
+    };
+
     gsap.fromTo(progress,
       { scaleY: 0 },
       {
@@ -500,8 +563,14 @@ function initAcademicTimeline() {
         scrollTrigger: {
           trigger: timeline,
           start: 'top 72%',
-          end: 'bottom 55%',
-          scrub: true
+          end: () => `+=${getScrollDistance()}`,
+          scrub: true,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => setActiveItems(self.progress),
+          onRefresh: (self) => {
+            getLineMetrics();
+            setActiveItems(self.progress);
+          }
         }
       }
     );
@@ -518,12 +587,12 @@ function initAcademicTimeline() {
             trigger: item,
             start: 'top 84%',
             toggleActions: 'play none none none',
-            onEnter: () => item.classList.add('is-active'),
-            onEnterBack: () => item.classList.add('is-active')
           }
         }
       );
     });
+
+    getLineMetrics();
   });
 }
 

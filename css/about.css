@@ -166,24 +166,26 @@
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  --timeline-line-start: 11px;
+  --timeline-line-end: 11px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: var(--timeline-line-start);
   left: 6px;
   width: 2px;
+  height: calc(var(--timeline-line-end) - var(--timeline-line-start));
   background: var(--border-medium);
 }
 
 .timeline-progress {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: var(--timeline-line-start);
   left: 6px;
   width: 2px;
+  height: calc(var(--timeline-line-end) - var(--timeline-line-start));
   background: var(--accent-primary);
   transform: scaleY(0);
   transform-origin: top;
@@ -263,4 +265,3 @@
     transform: none;
   }
 }
-
